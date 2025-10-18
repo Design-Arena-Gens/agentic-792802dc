@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 255 255 255;
+  --foreground: 9 9 11;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  color: rgb(var(--foreground));
+  background: rgb(var(--background));
+}
+
+.container-auth {
+  @apply min-h-screen flex items-center justify-center bg-gradient-to-br from-brand-50 to-white;
+}
+
+.card-auth {
+  @apply w-full max-w-md bg-white/80 backdrop-blur-lg shadow-xl border border-brand-100 rounded-2xl p-8;
+}
+
+.btn-primary {
+  @apply inline-flex w-full items-center justify-center rounded-lg bg-brand-600 px-4 py-2.5 text-white font-medium shadow hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-400 disabled:opacity-50;
+}
+
+.input {
+  @apply block w-full rounded-lg border border-zinc-200 bg-white px-3 py-2.5 text-sm shadow-sm placeholder:text-zinc-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none;
+}
